@@ -2,6 +2,7 @@ import { ActionTypes } from "../constants/actions-types";
 
 const initialState = {
   products: [],
+  cart: 0,
 };
 
 export const productReducer = (state = initialState, { type, payload }) => {
@@ -21,5 +22,14 @@ export const selectedProductReducer = (state = {}, { type, payload }) => {
       return {};
     default:
       return state;
+  }
+};
+
+export const counterReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.INC_CART:
+      return { ...state, cart: ++payload };
+    default:
+      return { ...state };
   }
 };

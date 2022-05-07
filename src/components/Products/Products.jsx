@@ -21,7 +21,7 @@ const Products = () => {
     getProducts();
   }, []);
   return (
-    <div className={styles.container} >
+    <div className={styles.container}>
       <div className={styles.top}>
         <h2 className={styles.title}>Products</h2>
         <div className={styles.actions}>
