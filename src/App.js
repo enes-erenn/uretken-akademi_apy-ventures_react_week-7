@@ -1,4 +1,3 @@
-import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
@@ -6,7 +5,7 @@ import Products from "./components/Products/Products";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ width: "100%" }}>
       <Router>
         <NavBar />
         <Routes>

@@ -1,5 +1,37 @@
 .container {
   width: 100%;
   height: 5rem;
-  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  margin: 0;
+  padding: 1rem 2rem;
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.title {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+.signUp {
+  margin-left: 1rem;
+  padding: 10px 1rem;
+  background: transparent;
+  border: 1px solid #000814;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.signIn {
+  cursor: pointer;
+}
+.signIn:hover {
+  text-decoration: underline;
 }
