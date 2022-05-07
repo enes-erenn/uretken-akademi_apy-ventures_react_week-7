@@ -1,13 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Provider } from "react-redux";
-import store from "./redux/store";
+import NavBar from "./components/NavBar/NavBar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
+import Products from "./components/Products/Products";
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">hello</div>
-    </Provider>
+    <div className="App">
+      <Router>
+        <NavBar />
+        <Route path="/" exact component={<Products />} />
+        <Route
+          path="/product/:productId"
+          exact
+          component={<ProductDetails />}
+        />
+      </Router>
+    </div>
   );
 }
 
