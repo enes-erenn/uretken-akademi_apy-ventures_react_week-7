@@ -1,12 +1,12 @@
 import React from "react";
 import ProductWidget from "../ProductWidget/ProductWidget";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setProducts } from "../../redux/actions/ProductActions";
+import styles from "./Products.module.css";
 
 const Products = () => {
-  const products = useSelector((state) => state);
   const dispatch = useDispatch();
   const getProducts = async () => {
     const products = await axios
@@ -20,11 +20,18 @@ const Products = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products);
   return (
-    <div>
-      Products
-      <ProductWidget />
+    <div className={styles.container} >
+      <div className={styles.top}>
+        <h2 className={styles.title}>Products</h2>
+        <div className={styles.actions}>
+          <h4>Filter</h4>
+          <h4>Sort</h4>
+        </div>
+      </div>
+      <div className={styles.products}>
+        <ProductWidget />
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import Products from "./components/Products/Products";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           />
           <Route>404 Not Found</Route>
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
